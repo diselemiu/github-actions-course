@@ -1,0 +1,13 @@
+name: 05-1 - filters activity types
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        run: echo "This job runs for pull requests of type opened and synchronize on the main branch."
+    
