@@ -1,0 +1,13 @@
+name: 05-2 - filters activity types
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        run: echo "This job runs for pull requests of type closed on the main branch."
+    
