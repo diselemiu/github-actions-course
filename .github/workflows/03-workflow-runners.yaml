@@ -1,0 +1,22 @@
+name: 03 - workflow runners
+on: push
+
+jobs:
+  ubuntu-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show OS
+        run: echo "This job is running on ${{ runner.os }} runner."
+
+  # Removed redundant 'jobs:' declaration to avoid YAML structure error
+  windows-echo:
+    runs-on: windows-latest
+    steps:
+      - name: show OS
+        run: echo "This job is running on ${{ runner.os }} runner."
+
+  mac-echo:
+    runs-on: macos-latest
+    steps:
+      - name: show OS
+        run: echo "This job is running on ${{ runner.os }} runner."
