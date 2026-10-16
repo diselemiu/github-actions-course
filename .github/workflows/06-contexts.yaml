@@ -17,3 +17,7 @@ jobs:
           EVENT_WORKFLOW: ${{ github.workflow }}
           EVENT_RUN_ID: ${{ github.run_id }}
           EVENT_RUN_NUMBER: ${{ github.run_number }}
+      - name: Retrieve Environment Variables
+        run: |
+          echo "Variable value: ${{vars.MY_VAR}}"
+          
