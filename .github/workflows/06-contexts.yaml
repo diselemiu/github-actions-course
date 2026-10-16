@@ -1,0 +1,19 @@
+name: 06 - contexts
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  echo-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Information
+        run: echo "This job demonstrates the use of contexts in GitHub Actions."
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_REF: ${{ github.ref }}
+          EVENT_SHA: ${{ github.sha }}
+          EVENT_ACTOR: ${{ github.actor }}
+          EVENT_WORKFLOW: ${{ github.workflow }}
+          EVENT_RUN_ID: ${{ github.run_id }}
+          EVENT_RUN_NUMBER: ${{ github.run_number }}
